@@ -1,0 +1,23 @@
+version: 0.2
+phases:
+  install:
+    commands:
+        - pip install boto3
+    finally:
+        - echo Executing finally install
+  pre_build:
+    commands:
+        - echo Executing pre build 
+    finally:
+        - echo Executing finally pre Build
+  build:
+    commands:
+        - echo Executing  build
+        - python -m unittest test_calc.py   
+    finally:
+        - echo Executing finally Build
+  post_build:
+    commands:
+        - echo Executing post build
+    finally:
+        - echo Executing finally post Build
