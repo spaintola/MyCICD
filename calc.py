@@ -7,5 +7,5 @@ import os
 
 print(os.getcwd())
 if __name__=='__main__':
-    z=add(2,3)
+    z=add(2,8)
     print(z)
